@@ -15,7 +15,7 @@ const registrar = async (req, res)=>{
 
     // Validar usuario duplicado
     // findOne busca por los diferentes atributos de la coleccion
-    const existeUsuario = await Usuario.findOne({email});
+    const existeUsuario = await Usuario.findOne({nombre});
 
     if(existeUsuario){
         const error = new Error("Usuario ya registrado");
